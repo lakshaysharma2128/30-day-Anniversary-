@@ -2,141 +2,270 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pink Royal Flip‑Book Calendar</title>
-
-  <!-- PageFlip -->
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/page-flip.min.css">
-  <script defer
-        src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/page-flip.browser.min.js"></script>
-
-  <style>
-    /* -------- GLOBAL / LAYOUT -------- */
-    *,*::before,*::after{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:"Comic Sans MS","Segoe UI",sans-serif;
-      background:linear-gradient(135deg,#ffd4e8 0%,#ffb3da 100%);
-      user-select:none}
-    body{display:flex;flex-direction:column;align-items:center;justify-content:center;
-      gap:1rem;padding:1.5rem}
-
-    h1{margin:0;color:#ff4fa6;text-shadow:2px 2px #fff}
-    p.tagline{margin:0 0 1rem;color:#ff7ec4}
-
-    /* -------- FLIP‑BOOK CONTAINER -------- */
-    #calendar{width:clamp(280px,90vw,420px);height:clamp(360px,90vh,560px);position:relative}
-
-    /* arrows */
-    .nav-btn{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:46px;
-      border:none;border-radius:50%;background:#ff4fa6;color:#fff;
-      font-size:1.6rem;cursor:pointer;display:grid;place-items:center;
-      box-shadow:0 4px 10px rgba(255,79,166,.4);
-      transition:transform .15s}
-    .nav-btn:hover{transform:translateY(-50%) scale(1.1)}
-    #prevBtn{left:-60px} #nextBtn{right:-60px}
-
-    /* -------- PAGE STYLING -------- */
-    .page{width:100%;height:100%;padding:2rem 1.5rem;background:#fff0f7;
-      display:flex;flex-direction:column;align-items:center;gap:.9rem;
-      border:14px solid transparent;
-      border-image:url("https://i.ibb.co/YpkJ31J/gold-frame.png") 30 round;
-      box-shadow:0 6px 14px rgba(0,0,0,.25);overflow:hidden}
-
-    .page h2{margin:0;color:#ff4fa6;font-size:1.7rem}
-    .page p.caption{margin:0;text-align:center;color:#e64597}
-    .page img{width:100%;max-height:200px;object-fit:cover;border-radius:12px;
-      border:3px solid #ff85c1;cursor:pointer;transition:transform .2s}
-    .page img:hover{transform:scale(1.03)}
-
-    /* progress label bottom */
-    .progress{margin-top:auto;color:#ff4fa6;font-size:.9rem}
-
-    /* -------- MODAL LIGHTBOX -------- */
-    #lightbox{position:fixed;inset:0;background:rgba(0,0,0,.6);
-      display:flex;align-items:center;justify-content:center;visibility:hidden;opacity:0;
-      transition:opacity .25s}
-    #lightbox.show{visibility:visible;opacity:1}
-    #lightbox img{max-width:90vw;max-height:85vh;border-radius:14px;
-      border:5px solid #ff4fa6;box-shadow:0 6px 18px rgba(0,0,0,.4)}
-
-    @media(max-width:500px){#prevBtn{left:-48px} #nextBtn{right:-48px}}
-  </style>
+  <title>Hello Kitty 30‑Day Calendar</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/page-flip.min.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <h1>Pink Royal Flip‑Calendar</h1>
-  <p class="tagline">Swipe or tap arrows to turn pages</p>
+  <h1>Hello Kitty Flip Calendar</h1>
+  <p class="tagline">Tap or drag to flip through the days</p>
 
-  <div id="calendar"></div>
-  <button id="prevBtn" class="nav-btn" aria-label="Previous">&#8249;</button>
-  <button id="nextBtn" class="nav-btn" aria-label="Next">&#8250;</button>
+  <div id="calendar">
+    <!-- START COPY HERE -->
+<section class="page">
+  <h2>Day 1: My Custom Title</h2>
+  <div class="image-wrapper">
+    <img src="assets/day1.jpg" class="main-photo"style="width:200px; height:193px;" alt="Day 1 image" />
+    <img src="assets/kitty-ribbon.png" class="ribbon-overlay" alt="Hello Kitty Ribbon" />
+  </div>
+  <p class="caption">This is the description for day 1.</p>
+</section>
 
-  <!-- modal lightbox -->
-  <div id="lightbox" onclick="this.classList.remove('show')">
-    <img src="" alt="preview">
+  <h2>Day 2: My Custom Title</h2>
+  <div class="image-wrapper">
+    <img src="assets/day2.jpg" class="main-photo"style="width:200px; height:193px;" alt="Day 2 image" />
+    <img src="assets/kitty-ribbon.png" class="ribbon-overlay" alt="Hello Kitty Ribbon" />
+  </div>
+  <p class="caption">This is the description for day 1.</p>
+</section>
+
+  <h2>Day 3: My Custom Title</h2>
+  <div class="image-wrapper">
+    <img src="assets/day3.jpg" class="main-photo"style="width:200px; height:193px;" alt="Day 3 image" />
+    <img src="assets/kitty-ribbon.png" class="ribbon-overlay" alt="Hello Kitty Ribbon" />
+  </div>
+  <p class="caption">This is the description for day 1.</p>
+</section>
+
+  <h2>Day 4: My Custom Title</h2>
+  <div class="image-wrapper">
+    <img src="assets/day4.jpg" class="main-photo"style="width:200px; height:193px;" alt="Day 4 image" />
+    <img src="assets/kitty-ribbon.png" class="ribbon-overlay" alt="Hello Kitty Ribbon" />
+  </div>
+  <p class="caption">This is the description for day 1.</p>
+</section>
+
+  <h2>Day 5: My Custom Title</h2>
+  <div class="image-wrapper">
+    <img src="assets/day5.jpg" class="main-photo"style="width:200px; height:193px;" alt="Day 5 image" />
+    <img src="assets/kitty-ribbon.png" class="ribbon-overlay" alt="Hello Kitty Ribbon" />
+  </div>
+  <p class="caption">This is the description for day 1.</p>
+</section>
+
+  <h2>Day 6: My Custom Title</h2>
+  <div class="image-wrapper">
+    <img src="assets/day6.jpg" class="main-photo"style="width:200px; height:193px;" alt="Day 6 image" />
+    <img src="assets/kitty-ribbon.png" class="ribbon-overlay" alt="Hello Kitty Ribbon" />
+  </div>
+  <p class="caption">This is the description for day 1.</p>
+</section>
+
+  <h2>Day 7: My Custom Title</h2>
+  <div class="image-wrapper">
+    <img src="assets/day7.jpg" class="main-photo"style="width:200px; height:193px;" alt="Day 7 image" />
+    <img src="assets/kitty-ribbon.png" class="ribbon-overlay" alt="Hello Kitty Ribbon" />
+  </div>
+  <p class="caption">This is the description for day 1.</p>
+</section>
+
+  <h2>Day 8: My Custom Title</h2>
+  <div class="image-wrapper">
+    <img src="assets/day8.jpg" class="main-photo"style="width:200px; height:193px;" alt="Day 8 image" />
+    <img src="assets/kitty-ribbon.png" class="ribbon-overlay" alt="Hello Kitty Ribbon" />
+  </div>
+  <p class="caption">This is the description for day 1.</p>
+</section>
+
+  <h2>Day 9: My Custom Title</h2>
+  <div class="image-wrapper">
+    <img src="assets/day9.jpg" class="main-photo"style="width:200px; height:193px;" alt="Day 9 image" />
+    <img src="assets/kitty-ribbon.png" class="ribbon-overlay" alt="Hello Kitty Ribbon" />
+  </div>
+  <p class="caption">This is the description for day 1.</p>
+</section>
+
+  <h2>Day 10: My Custom Title</h2>
+  <div class="image-wrapper">
+    <img src="assets/day10.jpg" class="main-photo"style="width:200px; height:193px;" alt="Day 10 image" />
+    <img src="assets/kitty-ribbon.png" class="ribbon-overlay" alt="Hello Kitty Ribbon" />
+  </div>
+  <p class="caption">This is the description for day 1.</p>
+</section>
+
+  <h2>Day 11: My Custom Title</h2>
+  <div class="image-wrapper">
+    <img src="assets/day11.jpg" class="main-photo"style="width:200px; height:193px;" alt="Day 11 image" />
+    <img src="assets/kitty-ribbon.png" class="ribbon-overlay" alt="Hello Kitty Ribbon" />
+  </div>
+  <p class="caption">This is the description for day 1.</p>
+</section>
+
+  <h2>Day 12: My Custom Title</h2>
+  <div class="image-wrapper">
+    <img src="assets/day12.jpg" class="main-photo"style="width:200px; height:193px;" alt="Day 12 image" />
+    <img src="assets/kitty-ribbon.png" class="ribbon-overlay" alt="Hello Kitty Ribbon" />
+  </div>
+  <p class="caption">This is the description for day 1.</p>
+</section>
+
+<h2>Day 13: My Custom Title</h2>
+  <div class="image-wrapper">
+    <img src="assets/day13.jpg" class="main-photo"style="width:200px; height:193px;" alt="Day 13 image" />
+    <img src="assets/kitty-ribbon.png" class="ribbon-overlay" alt="Hello Kitty Ribbon" />
+  </div>
+  <p class="caption">This is the description for day 1.</p>
+</section>
+
+  <h2>Day 14: My Custom Title</h2>
+  <div class="image-wrapper">
+    <img src="assets/day14.jpg" class="main-photo"style="width:200px; height:193px;" alt="Day 14 image" />
+    <img src="assets/kitty-ribbon.png" class="ribbon-overlay" alt="Hello Kitty Ribbon" />
+  </div>
+  <p class="caption">This is the description for day 1.</p>
+</section>
+
+  <h2>Day 15: My Custom Title</h2>
+  <div class="image-wrapper">
+    <img src="assets/day15.jpg" class="main-photo"style="width:200px; height:193px;" alt="Day 15 image" />
+    <img src="assets/kitty-ribbon.png" class="ribbon-overlay" alt="Hello Kitty Ribbon" />
+  </div>
+  <p class="caption">This is the description for day 1.</p>
+</section>
+
+  <h2>Day 16: My Custom Title</h2>
+  <div class="image-wrapper">
+    <img src="assets/day16.jpg" class="main-photo"style="width:200px; height:193px;" alt="Day 16 image" />
+    <img src="assets/kitty-ribbon.png" class="ribbon-overlay" alt="Hello Kitty Ribbon" />
+  </div>
+  <p class="caption">This is the description for day 1.</p>
+</section>
+
+  <h2>Day 17: My Custom Title</h2>
+  <div class="image-wrapper">
+    <img src="assets/day17.jpg" class="main-photo"style="width:200px; height:193px;" alt="Day 17 image" />
+    <img src="assets/kitty-ribbon.png" class="ribbon-overlay" alt="Hello Kitty Ribbon" />
+  </div>
+  <p class="caption">This is the description for day 1.</p>
+</section>
+
+  <h2>Day 18: My Custom Title</h2>
+  <div class="image-wrapper">
+    <img src="assets/day18.jpg" class="main-photo"style="width:200px; height:193px;" alt="Day 18 image" />
+    <img src="assets/kitty-ribbon.png" class="ribbon-overlay" alt="Hello Kitty Ribbon" />
+  </div>
+  <p class="caption">This is the description for day 1.</p>
+</section>
+
+  <h2>Day 19: My Custom Title</h2>
+  <div class="image-wrapper">
+    <img src="assets/day19.jpg" class="main-photo"style="width:200px; height:193px;" alt="Day 19 image" />
+    <img src="assets/kitty-ribbon.png" class="ribbon-overlay" alt="Hello Kitty Ribbon" />
+  </div>
+  <p class="caption">This is the description for day 1.</p>
+</section>
+
+  <h2>Day 20: My Custom Title</h2>
+  <div class="image-wrapper">
+    <img src="assets/day20.jpg" class="main-photo"style="width:200px; height:193px;" alt="Day 20 image" />
+    <img src="assets/kitty-ribbon.png" class="ribbon-overlay" alt="Hello Kitty Ribbon" />
+  </div>
+  <p class="caption">This is the description for day 1.</p>
+</section>
+
+  <h2>Day 21: My Custom Title</h2>
+  <div class="image-wrapper">
+    <img src="assets/day21.jpg" class="main-photo"style="width:200px; height:193px;" alt="Day 21 image" />
+    <img src="assets/kitty-ribbon.png" class="ribbon-overlay" alt="Hello Kitty Ribbon" />
+  </div>
+  <p class="caption">This is the description for day 1.</p>
+</section>
+
+  <h2>Day 22: My Custom Title</h2>
+  <div class="image-wrapper">
+    <img src="assets/day22.jpg" class="main-photo"style="width:200px; height:193px;" alt="Day 22 image" />
+    <img src="assets/kitty-ribbon.png" class="ribbon-overlay" alt="Hello Kitty Ribbon" />
+  </div>
+  <p class="caption">This is the description for day 1.</p>
+</section>
+
+  <h2>Day 23: My Custom Title</h2>
+  <div class="image-wrapper">
+    <img src="assets/day23.jpg" class="main-photo"style="width:200px; height:193px;" alt="Day 23 image" />
+    <img src="assets/kitty-ribbon.png" class="ribbon-overlay" alt="Hello Kitty Ribbon" />
+  </div>
+  <p class="caption">This is the description for day 1.</p>
+</section>
+
+  <h2>Day 24: My Custom Title</h2>
+  <div class="image-wrapper">
+    <img src="assets/day24.jpg" class="main-photo"style="width:200px; height:193px;" alt="Day 24 image" />
+    <img src="assets/kitty-ribbon.png" class="ribbon-overlay" alt="Hello Kitty Ribbon" />
+  </div>
+  <p class="caption">This is the description for day 1.</p>
+</section>
+
+  <h2>Day 25: My Custom Title</h2>
+  <div class="image-wrapper">
+    <img src="assets/day25.jpg" class="main-photo"style="width:200px; height:193px;" alt="Day 25 image" />
+    <img src="assets/kitty-ribbon.png" class="ribbon-overlay" alt="Hello Kitty Ribbon" />
+  </div>
+  <p class="caption">This is the description for day 1.</p>
+</section>
+
+  <h2>Day 26: My Custom Title</h2>
+  <div class="image-wrapper">
+    <img src="assets/day26.jpg" class="main-photo"style="width:200px; height:193px;" alt="Day 26 image" />
+    <img src="assets/kitty-ribbon.png" class="ribbon-overlay" alt="Hello Kitty Ribbon" />
+  </div>
+  <p class="caption">This is the description for day 1.</p>
+</section>
+
+  <h2>Day 27: My Custom Title</h2>
+  <div class="image-wrapper">
+    <img src="assets/day27.jpg" class="main-photo"style="width:200px; height:193px;" alt="Day 27 image" />
+    <img src="assets/kitty-ribbon.png" class="ribbon-overlay" alt="Hello Kitty Ribbon" />
+  </div>
+  <p class="caption">This is the description for day 1.</p>
+</section>
+
+  <h2>Day 28: My Custom Title</h2>
+  <div class="image-wrapper">
+    <img src="assets/day28.jpg" class="main-photo"style="width:200px; height:193px;" alt="Day 28 image" />
+    <img src="assets/kitty-ribbon.png" class="ribbon-overlay" alt="Hello Kitty Ribbon" />
+  </div>
+  <p class="caption">This is the description for day 1.</p>
+</section>
+
+  <h2>Day 29: My Custom Title</h2>
+  <div class="image-wrapper">
+    <img src="assets/day29.jpg" class="main-photo" style="width:300px; height:393px;" alt="Day 29 image" />
+    <img src="assets/kitty-ribbon.png" class="ribbon-overlay" alt="Hello Kitty Ribbon" />
+  </div>
+  <p class="caption">This is the description for day 1.</p>
+</section>
+
+  <h2>Day 30: My Custom Title</h2>
+  <div class="image-wrapper">
+    <img src="assets/day30.jpg" class="main-photo" alt="Day 30 image" />
+    <img src="assets/kitty-ribbon.png" class="ribbon-overlay" alt="Hello Kitty Ribbon" />
+  </div>
+  <p class="caption">This is the description for day 1.</p>
+</section>
+
   </div>
 
-  <!-- page‑turn sound -->
-  <audio id="flipSound" preload="auto"
-         src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_444fdd049e.mp3?filename=page-flip-110978.mp3"></audio>
-
+  <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/page-flip.browser.min.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const DAYS = 30;
-      const cal  = document.getElementById('calendar');
-      const flipSound = document.getElementById('flipSound');
-      const lightbox  = document.getElementById('lightbox');
-      const lbImg     = lightbox.querySelector('img');
-
-      /* ----------- PAGE CONTENT ----------- */
-      function contentForDay(n){
-        return `
-          <h2>Hello Kitty Day ${n}</h2>
-          <p class="caption">Cute pink vibes all day long! 💖</p>
-          <img src="https://picsum.photos/seed/pink${n}/400/240"
-               alt="Pic day ${n}" onclick="showLightbox(this.src)">
-          <div class="progress">Day ${n} / ${DAYS}</div>`;
-      }
-
-      /* build pages */
-      const frag = document.createDocumentFragment();
-      for(let i=1;i<=DAYS;i++){
-        const p=document.createElement('section');
-        p.className='page';
-        p.innerHTML=contentForDay(i);
-        frag.appendChild(p);
-      }
-      cal.appendChild(frag);
-
-      /* flip‑book init */
-      const pageFlip = new St.PageFlip.PageFlip(cal,{
-        width:cal.clientWidth,height:cal.clientHeight,size:'stretch',
-        minWidth:260,maxWidth:620,minHeight:340,maxHeight:900,
-        maxShadowOpacity:.6,showCover:false});
-      pageFlip.loadFromHTML(document.querySelectorAll('#calendar>.page'));
-
-      /* play sound on every flip */
-      pageFlip.on('flip', ()=> flipSound.currentTime=0, flipSound.play());
-
-      /* nav buttons */
-      document.getElementById('prevBtn').onclick = ()=> pageFlip.flipPrev();
-      document.getElementById('nextBtn').onclick = ()=> pageFlip.flipNext();
-
-      /* disable btns at ends */
-      function updateNav(){
-        const i=pageFlip.getCurrentPageIndex(), last=pageFlip.getPageCount()-1;
-        prevBtn.disabled = (i===0); nextBtn.disabled = (i===last);
-      }
-      pageFlip.on('flip', updateNav); updateNav();
-
-      /* lightbox helper */
-      window.showLightbox = src=>{
-        lbImg.src=src; lightbox.classList.add('show');
-      };
+    const pageFlip = new St.PageFlip.PageFlip(document.getElementById("calendar"), {
+      width: 500,
+      height: 880,
+      size: "stretch",
+      maxShadowOpacity: 0.6,
+      showCover: false,
     });
+    pageFlip.loadFromHTML(document.querySelectorAll("#calendar > .page"));
   </script>
-
-  <noscript><p style="color:red;text-align:center">Enable JavaScript to use the flip calendar.</p></noscript>
 </body>
 </html>
